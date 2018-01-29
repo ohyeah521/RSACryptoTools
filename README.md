@@ -16,5 +16,9 @@ s.encrypt(str)
 
 安装
 ```
-git clone
+git clone https://github.com/wjbsyc/homuraCtyptoTools.git
+cd homuraCtyptoTools
+python setup.py install
+
+
 ```
