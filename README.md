@@ -25,7 +25,7 @@ s.encrypt(str)
 
 
 
-安装
+## 安装
 
 ```
 git clone https://github.com/wjbsyc/homuraCtyptoTools.git
