@@ -23,6 +23,10 @@ str="string"
 s.encrypt(str)
 
 
+##RSA
+
+RSA_D(e,p,q) //计算D
+RSA_crypt(c,d,n) //加解密
 
 
 ## 安装

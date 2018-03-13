@@ -5,7 +5,7 @@ import hashlib
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_v1_5 as Cipher_pkcs1_v1_5
 _pythonMajorVersion = sys.version_info[0]
-
+import gmpy2
 ECB =	0
 CBC =	1
 
@@ -489,6 +489,13 @@ class des(_baseDes):
 		data = self.crypt(data, des.DECRYPT)
 		return self._unpadData(data, pad, padmode)
 
+def RSA_D(e,p,q):
+	d=gmpy2.invert(e,(p-1)*(q-1))
+	return d
+def RSA_crypt(c,d,n):
+	s=pow(c,d,n)
+	return s
+
 def md5s(raw_str=None):
 	m=hashlib.md5()
 	m.update(raw_str)
@@ -500,5 +507,6 @@ import RSAwienerHacker
 
 def wiener(e,n):
 	print RSAwienerHacker.hack_RSA(e,n)
+
 
 
